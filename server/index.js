@@ -82,9 +82,11 @@ mongoose
     console.log('╚═══════════════════════════════════════════╝');
     console.log('');
 
-    app.listen(PORT, () => {
-      console.log(`Listening on port ${PORT} ...`);
-    });
+    if (process.env.NODE_ENV !== 'production') {
+      app.listen(PORT, () => {
+        console.log(`Listening on port ${PORT} ...`);
+      });
+    }
   })
   .catch((err) => {
     console.error('');
@@ -102,3 +104,5 @@ process.on('SIGINT', async () => {
   console.log('\nMongoDB disconnected. Server stopped.');
   process.exit(0);
 });
+
+module.exports = app;
