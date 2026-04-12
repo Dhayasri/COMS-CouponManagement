@@ -1,0 +1,228 @@
+/* ─── Offers Page ──────────────────────────────────────────────── */
+
+.offers-page { animation: fadeIn 0.3s ease; }
+
+.page-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* View Toggle */
+.view-toggle {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.toggle-btn {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.toggle-btn:hover { background: var(--bg-elevated); color: var(--text-primary); }
+
+.toggle-btn--active {
+  background: var(--emerald-primary);
+  color: #fff;
+}
+
+/* Card Grid */
+.offers-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Offer Card */
+.offer-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.offer-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.offer-card-banner {
+  height: 6px;
+  background: var(--banner);
+}
+
+.offer-card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.offer-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offer-card-name {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.offer-card-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.offer-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.offer-card-coupons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.coupon-chip {
+  background: var(--emerald-50);
+  color: var(--emerald-dark);
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.coupon-chip-more {
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 11px;
+}
+
+.offer-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* Offer Form */
+.offer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Linked Coupons Checkbox Grid */
+.linked-coupons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+.linked-coupon-opt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 12px;
+}
+
+.linked-coupon-opt:hover { background: var(--bg-elevated); }
+
+.linked-coupon-opt--checked {
+  border-color: var(--emerald-primary);
+  background: var(--emerald-50);
+}
+
+.link-type {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+/* Color Picker */
+.color-picker-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.color-picker {
+  width: 44px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 2px;
+  cursor: pointer;
+  background: var(--bg-surface);
+}
+
+.color-presets { display: flex; gap: 6px; }
+
+.color-preset {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+.color-preset:hover { transform: scale(1.15); }
+.color-preset--active { border-color: var(--text-primary) !important; }
+
+.action-btns {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.delete-confirm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.delete-code {
+  background: #fef2f2;
+  color: var(--danger);
+  padding: 6px 20px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 700;
+}

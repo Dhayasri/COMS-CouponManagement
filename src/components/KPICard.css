@@ -1,0 +1,86 @@
+.kpi-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.kpi-emerald::before { background: var(--emerald-primary); }
+.kpi-amber::before   { background: var(--warning); }
+.kpi-rose::before    { background: var(--danger); }
+.kpi-blue::before    { background: var(--info); }
+.kpi-purple::before  { background: #6366f1; }
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.kpi-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.kpi-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpi-value {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.kpi-trend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.trend-up  { color: var(--success); }
+.trend-down { color: var(--danger); }
+
+.kpi-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.kpi-icon-emerald { background: var(--emerald-50); color: var(--emerald-primary); }
+.kpi-icon-amber   { background: #fffbeb; color: var(--warning); }
+.kpi-icon-rose    { background: #fff1f2; color: var(--danger); }
+.kpi-icon-blue    { background: #eff6ff; color: var(--info); }
+.kpi-icon-purple  { background: #ede9fe; color: #6366f1; }

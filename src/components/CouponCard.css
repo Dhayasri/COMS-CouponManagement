@@ -1,0 +1,131 @@
+.coupon-card {
+  position: relative;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  display: flex;
+}
+
+.coupon-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--card-color, var(--emerald-primary));
+}
+
+.coupon-strip {
+  width: 6px;
+  background: var(--card-color, var(--emerald-primary));
+  flex-shrink: 0;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+.coupon-scissors {
+  position: absolute;
+  left: -2px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 18px;
+  color: var(--border);
+  user-select: none;
+}
+
+.coupon-inner {
+  flex: 1;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.coupon-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.coupon-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.coupon-code {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+}
+
+.coupon-discount {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--card-color, var(--emerald-primary));
+  letter-spacing: -0.5px;
+}
+
+.coupon-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.coupon-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meta-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+}
+
+.meta-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.coupon-usage {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.usage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coupon-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+  font-size: 12px;
+}
+
+.expiry-text {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.usage-count {
+  color: var(--text-muted);
+}
+
+.usage-count strong {
+  color: var(--text-primary);
+}

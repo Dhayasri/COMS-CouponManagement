@@ -1,0 +1,124 @@
+/* ─── Coupons Page ─────────────────────────────────────────────── */
+
+.coupons-page { animation: fadeIn 0.3s ease; }
+
+.page-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Code pill in table */
+.code-pill {
+  background: var(--emerald-50);
+  color: var(--emerald-dark);
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Action Buttons */
+.action-btns {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.action-btn { padding: 5px 10px !important; font-size: 12px !important; }
+
+.btn-pause {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+  border-radius: var(--radius-md);
+}
+.btn-pause:hover { background: #ffedd5; }
+
+.btn-resume {
+  background: var(--emerald-50);
+  color: var(--emerald-dark);
+  border: 1px solid var(--emerald-200);
+  border-radius: var(--radius-md);
+}
+.btn-resume:hover { background: var(--emerald-100); }
+
+/* Coupon Form */
+.cpn-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.code-input-wrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.code-input-wrap .form-control {
+  flex: 1;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Status Toggle */
+.status-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.status-opt {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border);
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.status-opt--active {
+  border-color: var(--emerald-primary);
+  background: var(--emerald-50);
+  color: var(--emerald-dark);
+  font-weight: 600;
+}
+
+/* Stacking warning */
+.stacking-warn {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #92400e;
+}
+
+/* Delete confirm */
+.delete-confirm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.delete-code {
+  background: #fef2f2;
+  color: var(--danger);
+  padding: 6px 20px;
+  border-radius: var(--radius-md);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}

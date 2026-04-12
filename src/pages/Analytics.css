@@ -1,0 +1,35 @@
+/* ─── Analytics Page ───────────────────────────────────────────── */
+
+.analytics-page { animation: fadeIn 0.3s ease; }
+
+.analytics-filters {
+  padding: 20px 24px;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.analytics-charts {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 20px;
+  margin-bottom: 8px;
+}
+
+.code-pill {
+  background: var(--emerald-50);
+  color: var(--emerald-dark);
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 1100px) {
+  .analytics-charts { grid-template-columns: 1fr; }
+}
