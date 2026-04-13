@@ -28,19 +28,21 @@ export default function Modal({ onClose, title, children, footer, size = 'md' })
     document.addEventListener('keydown', handleKeyDown);
     document.body.style.overflow = 'hidden';
 
-    // Focus first focusable element
-    setTimeout(() => {
-      const focusable = modalRef.current?.querySelector(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      focusable?.focus();
-    }, 50);
-
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = '';
     };
   }, [onClose]);
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      const focusable = modalRef.current?.querySelector(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      focusable?.focus();
+    }, 50);
+    return () => clearTimeout(t);
+  }, []);
 
   return (
     <div className="overlay" onClick={(e) => e.target === e.currentTarget && onClose()}>
