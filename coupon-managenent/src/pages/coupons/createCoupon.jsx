@@ -214,8 +214,8 @@ export default function CreateCoupon({ onNavigate }) {
             background: "#fff", color: "#64748B", fontWeight: 600, fontSize: 13, cursor: "pointer",
             transition: "background 0.15s"
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "#F8FAFC")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "#fff")}>
+            onMouseEnter={(e) => (e.currentTarget.style.background = "#F8FAFC")}
+            onMouseLeave={(e) => (e.currentTarget.style.background = "#fff")}>
             Cancel
           </button>
           <button onClick={() => onNavigate && onNavigate("coupons")} style={{
@@ -224,8 +224,8 @@ export default function CreateCoupon({ onNavigate }) {
             boxShadow: "0 4px 14px rgba(29,78,216,0.32)",
             transition: "background 0.15s"
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "#1e40af")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "#1D4ED8")}>
+            onMouseEnter={(e) => (e.currentTarget.style.background = "#1e40af")}
+            onMouseLeave={(e) => (e.currentTarget.style.background = "#1D4ED8")}>
             Save Coupon
           </button>
         </div>
